@@ -1,22 +1,23 @@
 package com.fasttrackit;
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-
-        double x = 20;
-        double y = 10;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Dati numerele x si y");
+        System.out.print("x = ");
+        double x = in.nextDouble();
+        System.out.print("y = ");
+        double y = in.nextDouble();
 
         OperatiiMatematice operatii = new OperatiiMatematice();
-        System.out.println("Rezultatul sumei este: ");
-        System.out.println(operatii.adunare(x, y));
-        System.out.println("Rezultatul scaderii este: ");
-        System.out.println(operatii.scadere(x, y));
-        System.out.println("Rezultatul inmultirii este: ");
-        System.out.println(operatii.inmultire(x, y));
-        System.out.println("Rezultatul impartirii este: ");
-        System.out.println(operatii.impartire(x, y));
+        System.out.println("Rezultatul sumei este: " + operatii.adunare(x, y));
+        System.out.println("Rezultatul scaderii este: " + operatii.scadere(x, y));
+        System.out.println("Rezultatul inmultirii este: " + operatii.inmultire(x, y));
+        System.out.println("Rezultatul impartirii este: " + operatii.impartire(x, y));
     }
 }
